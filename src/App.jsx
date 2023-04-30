@@ -4,6 +4,8 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import Checkout from './pages/Checkout'
 import NotFound from './pages/NotFound'
 import ContactUs from './pages/ContactUs'
+import Dashboard from './pages/Dashboard'
+import Coffee from './pages/Coffee'
 
 function App() {
 
@@ -13,7 +15,9 @@ function App() {
         <Route path='/' element={<Home/>} />
         <Route path='home' element={<Navigate to='/' />} />
         <Route path='/checkout' element={<Checkout/>}  />
-        <Route path='contact-us' element={<ContactUs/>} />
+        <Route path='/contact-us' element={<ContactUs/>} />
+        <Route path='/my-account' element={<Dashboard/>} />
+        <Route path='/products/coffee' element={<Coffee/>} />
         <Route path='*' element={<NotFound/>} />
       </Routes>
     </Layout>
